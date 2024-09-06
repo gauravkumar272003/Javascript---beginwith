@@ -1,0 +1,62 @@
+class Item {
+    constructor(id, name, quantity, price) {
+        this.id = id;
+        this.name = name;
+        this.quantity = quantity;
+        this.price = price;
+    }
+}
+
+let inventory = [
+    new Item(1, 'apple', 10, 0.5),
+    new Item(2, 'banana', 20, 0.2)
+];
+
+function addItem(inventory, item) {
+    inventory.push(item);
+}
+
+function updateItem(inventory, id, newDetails) {
+    const item = inventory.find(item => item.id === id);
+    if (item) {
+        Object.assign(item, newDetails);
+    }
+}
+
+function deleteItem(inventory, id) {
+    const index = inventory.findIndex(item => item.id === id);
+    if (index !== -1) {
+        inventory.splice(index, 1);
+    }
+}
+
+function getItem(inventory, id) {
+    return inventory.find(item => item.id === id);
+}
+
+function printInventory(inventory) {
+    console.log('Inventory:');
+    inventory.forEach(item => {
+        console.log(`ID: ${item.id}, Name: ${item.name}, Quantity: ${item.quantity}, Price: ${item.price}`);
+    });
+}
+
+console.log('Initial Inventory:');
+printInventory(inventory);
+
+const newItem = new Item(3, 'orange', 15, 0.7);
+addItem(inventory, newItem);
+console.log('\nAfter Adding Item:');
+printInventory(inventory);
+
+updateItem(inventory, 2, { name: 'Banana', quantity: 25, price: 0.25 });
+console.log('\nAfter Updating Item:');
+printInventory(inventory);
+
+deleteItem(inventory, 1);
+console.log('\nAfter Deleting Item:');
+printInventory(inventory);
+
+const item = getItem(inventory, 3);
+console.log('\nGet Item with ID 3:');
+console.log(`ID: ${item.id}, Name: ${item.name}, Quantity: ${item.quantity}, Price: ${item.price}`);
