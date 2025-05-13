@@ -1,101 +1,34 @@
-// let a = 30;
-// let b = 40;
-
-// let choice = "+s";
-
-// switch (choice) {
-//     case "*": 
-//         console.log(a*b); 
-//         break;  
-//     case "-":
-//         console.log(a-b);
-//         break;
-//     case "+":
-//         console.log(a+b);
-//         break;
-//     case "/":
-//         console.log(a/b);
-//         break;
-//     default:
-//         console.log("hehe");
-        
+// //objects
+// const user = {
+//     firstName: "gaurav",
+//     lastName : "Kumar",
+//     "fullname" : "Gaurav Kumar",
+//     age : 99,
+//     ph_number : 999,
+//     email : "xyz@gmail.com",
+//     firends : ["rishi" , "ritik", "raju", "ramesh", "ranjha"]
 // }
 
-//for loop
-// for(let i = 0; i<=10; i++) {
-//     console.log(i);
+// console.log(user.firstName);
+// console.log(user["fullname"]);
+
+
+//functions  
+// function print(...nums) {
+//     return nums;
 // }
 
-//while loop
-// let st = 1;
-// let en = 10;
+// console.log(print(1,2,3));
 
-// while(st < en) {
-//     console.log(st +  "->" + en );
-//     st+=1;
+// console.log((addone(5)));
+// //will work
+// function addone(num) {
+//     return 1 + num;
 // }
 
-//function
+//wont work
+// console.log(addtwo(5));
 
-//void function
-// function printName(){
-//     console.log("gaurav kumar");
-    
+// const addtwo = function (num) {
+//     return 1 + num;
 // }
-// printName();
-
-//function that return a value
-// function loop(st, en){
-//     let v = 0;
-//     while(st < en) {
-//         st++;        
-//     }
-//     v = st;
-//     return v;
-// }
-
-// let val = loop(1, 11);
-// console.log(val);
-
-//arrow function
-
-// const add = (a,b) => a+b;
-// console.log(add(1,2));
-
-// const func = () => {
-//     console.log("gaurav is great");    
-// }
-
-// func();
-
-//arrow function to add 5 integers
-
-// const add = (...nums) => {
-//     let val = 0;
-//     for(let i = 0; i<5; i++) val += nums[i];
-//     return val;
-// } 
-
-// console.log(add(1,2,3,4,5));
-
-//higher order function when we are deaing with maybe time thing
-
-// const func = (a,b , store) => {
-//     let res = a+b;
-//     store(res);
-// }
-
-// func(2,3, val => console.log(val));
-
-//array in js
-
-// const nigs = ["a" , "b", "c"];
-// console.log(nigs[1]);
-// nigs.push("😅");
-// nigs.push("😅");
-// console.log(nigs);
-// nigs.pop();
-// console.log(nigs);
-
-// let size = nigs.length;
-// for(let i = 0; i<size; i++) console.log(nigs[i]);
